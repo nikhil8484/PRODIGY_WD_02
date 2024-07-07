@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Content area -->
+
+
+    <h1 style=" margin-top: 50px;">task 01 :
+        <div class="content">
+    </h1>
+    <p style=" margin-top: 50px;">Create an interactive navigation menu that changes color or style when scrolled or
+        when hovering over a menu
+        item. The navigation menu should have a fixed position and be visible on all pages. Use HTML to structure the
+        menu, CSS to style it, and JavaScript to add interactivity, such as changing the background color or font color
+        of the menu when it is scrolled or when a menu item is hovered over.
+
+    <p style="margin-top: 20px;">PRODIGY INFOTECH</p>
+
+    <span>01</span>
+
+    <p> Comillas Negras <span>Task-01</span></p>
+
+
+    <p>Responsive Landing Page</p>
+
+    </p>
+    </div>
+
+    <script>
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            var header = document.querySelector("header");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        }
+
+        // Function to change nav item color on hover
+        var navItems = document.querySelectorAll("#main-nav ul li a");
+
+        navItems.forEach(function (item) {
+            item.addEventListener("mouseover", function () {
+                this.style.color = "#ff6347"; // Change to desired hover color
+            });
+
+            item.addEventListener("mouseout", function () {
+                this.style.color = "#fff"; // Change back to default color
+            });
+        });
+
+    </script>
+</body>
+
+</html>

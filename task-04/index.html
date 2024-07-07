@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nikhil - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="home">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Nikhil Chaudhari</h1>
+                <p>Web Developer</p>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate web developer with several years of experience in building responsive websites and web
+                applications. I specialize in front-end development with proficiency in HTML, CSS, JavaScript, and
+                frameworks like React and Vue.js.</p>
+            <p>My journey started with a Bachelor's degree in Computer Science from dr.babasaheb University. I have
+                worked
+                with various clients and companies, contributing to projects that enhance user experience and drive
+                business growth.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 style="margin-top: 20px;">Skills</h2>
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Responsive Web Design</li>
+                <li>Front-end Frameworks (React, Vue.js)</li>
+                <li>Version Control (Git)</li>
+                <li>UI/UX Design Principles</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <a href="file:///C:/Users/NIKHIL/Desktop/new/task-02/index.html">Project 1</a>
+
+                <p>To build a stopwatch web application, you can use HTML, CSS, and JavaScript.
+                    HTML is used to structure the elements of the application. By implementing
+                    functions for starting, pausing, and resetting the stopwatch, as well as
+                    tracking and displaying lap times, users can accurately measure and record time
+                    intervals. With these technologies and functionalities, you can create an
+                    interactive and user-friendly stopwatch web application.</p>
+            </div>
+            <div class="project">
+                <a href="file:///C:/Users/NIKHIL/Desktop/new/task-03/index.html">Project 2</a>
+                <p>To build a tic-tac-toe web application, you can use HTML, CSS, and JavaScript.
+                    By implementing functions to handle user clicks, track game state, and check
+                    for winning conditions, you can create an interactive and engaging tic-tac-toe
+                    game. With these technologies and functionalities, users can play against each
+                    other or against an AI opponent, aiming to get three markers in a row to win
+                    the game.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+
+    <div class="containe"
+        style=" background-color: rgb(108, 108, 58); align-items: center; justify-content: center; display: flex;">
+        <p>&copy; 2024 Nikhil Chaudhari. All rights reserved.</p>
+    </div>
+
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form validation
+        function validateForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const formStatus = document.getElementById('formStatus');
+
+            if (name === '' || email === '' || message === '') {
+                formStatus.innerHTML = '<p style="color: red;">Please fill in all fields.</p>';
+            } else {
+                formStatus.innerHTML = '<p style="color: green;">Message sent successfully!</p>';
+                document.getElementById('contactForm').reset();
+            }
+        }
+    </script>
+</body>
+
+</html>
